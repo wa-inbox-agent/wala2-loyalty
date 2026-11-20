@@ -8,28 +8,32 @@
 :root{--c:#0f766e;--bg:#f4f6f5;--ink:#14201e;--mut:#64748b;--card:#fff;--line:#e2e8e6}
 *{box-sizing:border-box}
 body{margin:0;font-family:Tahoma,"Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--ink);font-size:16px}
-.wrap{max-width:520px;margin:0 auto;padding:16px 16px 90px}
-h1{font-size:26px;margin:8px 0}h2{font-size:19px;margin:0 0 10px}
+.wrap{max-width:560px;margin:0 auto;padding:16px 16px 90px}
+h1{font-size:26px;margin:8px 0}h2{font-size:19px;margin:0 0 10px}h3{font-size:16px;margin:16px 0 6px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin:12px 0}
 label{display:block;font-size:14px;color:var(--mut);margin:12px 0 4px}
-input,select{width:100%;padding:13px;border:1px solid #cbd5d1;border-radius:12px;font-size:17px;font-family:inherit;background:#fff}
-input[type=color]{padding:2px;height:46px}
+input,select,textarea{width:100%;padding:13px;border:1px solid #cbd5d1;border-radius:12px;font-size:17px;font-family:inherit;background:#fff}
+textarea{font-size:15px;min-height:70px}
+input[type=color]{padding:2px;height:46px}input[type=checkbox]{width:auto;transform:scale(1.4);margin-left:8px}
 .btn{display:block;width:100%;padding:14px;border:0;border-radius:12px;background:var(--c);color:#fff;font-size:18px;font-weight:700;margin-top:14px;font-family:inherit;cursor:pointer}
 .btn.alt{background:#fff;color:var(--c);border:2px solid var(--c)}
+.btn.sm{display:inline-block;width:auto;padding:8px 14px;font-size:14px;margin:0}
+.btn.red{background:#b91c1c}
 .btn:disabled{opacity:.5}
 .err{background:#fee2e2;color:#991b1b;padding:10px;border-radius:10px;margin-top:10px;font-size:15px}
 .ok{background:#dcfce7;color:#166534;padding:10px;border-radius:10px;margin-top:10px;font-size:15px}
+.warn{background:#fef9c3;color:#854d0e;padding:10px;border-radius:10px;margin-top:10px;font-size:14px}
 .hero{background:linear-gradient(135deg,#0f766e,#14b8a6);color:#fff;border-radius:20px;padding:24px;margin:8px 0}
 .hero p{margin:6px 0 0;opacity:.95;line-height:1.7}
-.seg{display:flex;gap:8px}.seg button{flex:1;padding:12px;border-radius:12px;border:2px solid #cbd5d1;background:#fff;font-size:16px;font-family:inherit}
+.seg{display:flex;gap:6px}.seg button{flex:1;padding:11px 4px;border-radius:12px;border:2px solid #cbd5d1;background:#fff;font-size:15px;font-family:inherit}
 .seg button.on{border-color:var(--c);background:#ecfdf5;font-weight:700}
 nav.tabs{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);display:flex}
-nav.tabs button{flex:1;padding:14px 4px;border:0;background:none;font-size:15px;font-family:inherit;color:var(--mut)}
+nav.tabs button{flex:1;padding:14px 2px;border:0;background:none;font-size:14px;font-family:inherit;color:var(--mut)}
 nav.tabs button.on{color:var(--c);font-weight:700;border-top:3px solid var(--c);margin-top:-1px}
 .stats{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .stat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;text-align:center}
 .stat b{display:block;font-size:26px;color:var(--c)}.stat span{font-size:13px;color:var(--mut)}
-.row{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:12px 0;border-bottom:1px solid var(--line)}
 .row:last-child{border:0}.row small{color:var(--mut);display:block;margin-top:2px}
 .dots{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0}
 .dot{width:42px;height:42px;border-radius:50%;border:2px dashed var(--c);display:flex;align-items:center;justify-content:center;font-size:22px;color:#fff}
@@ -40,6 +44,13 @@ nav.tabs button.on{color:var(--c);font-weight:700;border-top:3px solid var(--c);
 .link{direction:ltr;text-align:left;background:#f1f5f4;padding:10px;border-radius:10px;word-break:break-all;font-size:14px}
 a{color:var(--c)}
 .celebrate{background:#fef9c3;border:2px solid #facc15;border-radius:14px;padding:12px;text-align:center;font-weight:700;margin-top:12px}
+.chart{display:flex;align-items:flex-end;gap:4px;height:110px;margin-top:10px}
+.chart div{flex:1;background:var(--c);border-radius:4px 4px 0 0;min-height:3px;position:relative;opacity:.85}
+.chart span{position:absolute;top:-16px;width:100%;text-align:center;font-size:10px;color:var(--mut)}
+.tag{display:inline-block;padding:2px 8px;border-radius:99px;font-size:12px;background:#e2e8e6;color:#334155}
+.tag.bad{background:#fee2e2;color:#991b1b}.tag.good{background:#dcfce7;color:#166534}.tag.wait{background:#fef9c3;color:#854d0e}
+.codebox{font-size:30px;letter-spacing:3px;text-align:center;direction:ltr;background:#f1f5f4;border:2px dashed var(--c);border-radius:12px;padding:14px;margin:12px 0;font-weight:800}
+.sw{display:flex;align-items:center;margin:10px 0}
 </style>
 </head>
 <body>
@@ -49,8 +60,9 @@ const $ = s => document.querySelector(s);
 const app = $('#app');
 let token = localStorage.getItem('tok') || '';
 let me = null, tab = 'staff';
-const api = async (method, url, data) => {
+const api = async (method, url, data, raw) => {
   const r = await fetch(url, { method, headers: { 'Content-Type': 'application/json', ...(token ? { Authorization: 'Bearer ' + token } : {}) }, body: data ? JSON.stringify(data) : undefined });
+  if (raw && r.ok) return r;
   const j = await r.json().catch(() => ({}));
   if (!r.ok) { if (r.status === 401 && token) { token = ''; localStorage.removeItem('tok'); } throw new Error(j.error || 'حصل خطأ'); }
   return j;
@@ -58,32 +70,34 @@ const api = async (method, url, data) => {
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const msg = (id, t, ok) => { const e = $(id); if (e) e.innerHTML = t ? `<div class="${ok ? 'ok' : 'err'}">${esc(t)}</div>` : ''; };
 const fmtDate = t => t ? new Date(t).toLocaleDateString('ar-EG', { day: 'numeric', month: 'short' }) : '-';
+const fmtTime = t => new Date(t).toLocaleString('ar-EG', { day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit' });
 const unit = b => b.mode === 'points' ? 'نقطة' : 'ختم';
+const setColor = c => document.documentElement.style.setProperty('--c', c);
+const isOwner = () => me && me.role === 'owner';
 
-// ---------- routing ----------
 async function route() {
-  const p = location.pathname;
-  const m = p.match(/^\/b\/([^/]+)/);
+  const m = location.pathname.match(/^\/b\/([^/]+)/);
   if (m) return customerView(m[1]);
-  if (token) { try { me = await api('GET', '/api/me'); document.documentElement.style.setProperty('--c', me.color); return dash(); } catch (e) {} }
+  if (token) { try { me = await api('GET', '/api/me'); setColor(me.color); return dash(); } catch (e) {} }
   return landing();
 }
 
-// ---------- landing / signup / login ----------
-function landing() {
-  document.documentElement.style.setProperty('--c', '#0f766e');
+// ---------- landing ----------
+function landing(mode) {
+  setColor('#0f766e');
   app.innerHTML = `
   <div class="hero"><h1>برنامج ولاء لأي نشاط</h1>
   <p>خلي عملاءك يرجعولك. كل زيارة أو فاتورة بتتسجل كختم أو نقاط، ولما العميل يكمل بياخد مكافأة. تفتح حسابك في دقيقة وتشتغل من الموبايل.</p></div>
   <div class="card"><h2>إزاي بيشتغل؟</h2>
   <p>١. تسجل نشاطك وتختار ختم أو نقاط وشكل المكافأة.<br>٢. العميل يقولك رقم جواله عند الدفع وإنت تضغط "سجل".<br>٣. العميل يفتح رابط نشاطك ويكتب رقمه يشوف كارته.<br>٤. لما يكمل، تدّيه المكافأة بضغطة.</p></div>
-  <div class="card"><div class="seg"><button id="tSign" class="on">حساب جديد</button><button id="tLog">دخول</button></div><div id="form"></div></div>`;
-  const show = mode => {
-    $('#tSign').classList.toggle('on', mode === 's'); $('#tLog').classList.toggle('on', mode === 'l');
-    $('#form').innerHTML = mode === 's' ? signupForm() : loginForm();
-    if (mode === 's') wireSignup(); else wireLogin();
+  <div class="card"><div class="seg"><button id="tSign">حساب جديد</button><button id="tLog">دخول المالك</button><button id="tStaff">دخول موظف</button></div><div id="form"></div></div>`;
+  const show = m => {
+    ['Sign', 'Log', 'Staff'].forEach(k => $('#t' + k).classList.toggle('on', ('t' + k) === 't' + m));
+    $('#form').innerHTML = { Sign: signupForm, Log: loginForm, Staff: staffForm, Reset: resetForm }[m]();
+    ({ Sign: wireSignup, Log: wireLogin, Staff: wireStaff, Reset: wireReset })[m]();
   };
-  $('#tSign').onclick = () => show('s'); $('#tLog').onclick = () => show('l'); show('s');
+  $('#tSign').onclick = () => show('Sign'); $('#tLog').onclick = () => show('Log'); $('#tStaff').onclick = () => show('Staff');
+  window.showForm = show; show(mode || 'Sign');
 }
 function signupForm() {
   return `<label>اسم النشاط</label><input id="name" placeholder="مثال: صالون ورد" autocomplete="organization">
@@ -91,10 +105,9 @@ function signupForm() {
   <label>رقم جوالك (لتسجيل الدخول)</label><input id="phone" type="tel" inputmode="numeric" placeholder="05xxxxxxxx">
   <label>كلمة السر</label><input id="pw" type="password" autocomplete="new-password">
   <label>نظام الولاء</label><div class="seg"><button type="button" data-m="stamps" class="on">أختام (زيارات)</button><button type="button" data-m="points">نقاط (حسب المبلغ)</button></div>
-  <div id="stampsHelp" class="mut" style="margin-top:6px"></div>
   <label id="goalL">عدد الأختام لإكمال المكافأة</label><input id="goal" type="number" inputmode="numeric" value="10">
-  <div id="rateBox" style="display:none"><label>كام نقطة عن كل 1 ريال/جنيه؟</label><input id="rate" type="number" step="0.1" value="1"></div>
-  <label>المكافأة</label><input id="reward" placeholder="مثال: قص شعر مجاني" value="">
+  <div id="rateBox" style="display:none"><label>كام نقطة عن كل 1 وحدة عملة؟</label><input id="rate" type="number" step="0.1" value="1"></div>
+  <label>المكافأة</label><input id="reward" placeholder="مثال: قص شعر مجاني">
   <button class="btn" id="go">افتح حسابي</button><div id="m"></div>`;
 }
 let sMode = 'stamps';
@@ -110,51 +123,87 @@ function wireSignup() {
     $('#go').disabled = true;
     try {
       const r = await api('POST', '/api/signup', { name: $('#name').value, slug: $('#slug').value, phone: $('#phone').value, password: $('#pw').value, mode: sMode, goal: $('#goal').value, rate: $('#rate').value, reward: $('#reward').value });
-      token = r.token; localStorage.setItem('tok', token); route();
+      token = r.token; localStorage.setItem('tok', token); showRecovery(r.recovery_code, true);
     } catch (e) { msg('#m', e.message); $('#go').disabled = false; }
   };
+}
+function showRecovery(code, first) {
+  app.innerHTML = `<div class="card center"><h2>${first ? 'تم فتح حسابك' : 'تم تغيير كلمة السر'}</h2>
+  <p>ده كود الاسترجاع بتاعك. لو نسيت كلمة السر هتحتاجه. اكتبه أو صوّر الشاشة واحتفظ بيه. <b>مش هيظهر تاني.</b></p>
+  <div class="codebox">${esc(code)}</div><button class="btn" id="ok">حفظته، كمّل</button></div>`;
+  $('#ok').onclick = route;
 }
 function loginForm() {
   return `<label>رقم الجوال</label><input id="phone" type="tel" inputmode="numeric">
   <label>كلمة السر</label><input id="pw" type="password" autocomplete="current-password">
-  <button class="btn" id="go">دخول</button><div id="m"></div>`;
+  <button class="btn" id="go">دخول</button><div id="m"></div>
+  <p class="center"><a href="#" id="fg">نسيت كلمة السر؟</a></p>`;
 }
 function wireLogin() {
   $('#go').onclick = async () => {
     try { const r = await api('POST', '/api/login', { phone: $('#phone').value, password: $('#pw').value }); token = r.token; localStorage.setItem('tok', token); route(); }
     catch (e) { msg('#m', e.message); }
   };
+  $('#fg').onclick = e => { e.preventDefault(); $('#form').innerHTML = resetForm(); wireReset(); };
+}
+function resetForm() {
+  return `<h3>استرجاع كلمة السر</h3><label>رقم جوال النشاط</label><input id="phone" type="tel" inputmode="numeric">
+  <label>كود الاسترجاع (اللي اتعرض لك وقت التسجيل)</label><input id="code" dir="ltr" autocapitalize="characters">
+  <label>كلمة السر الجديدة</label><input id="pw" type="password">
+  <button class="btn" id="go">غيّر كلمة السر</button><div id="m"></div>`;
+}
+function wireReset() {
+  $('#go').onclick = async () => {
+    try { const r = await api('POST', '/api/reset', { phone: $('#phone').value, code: $('#code').value, password: $('#pw').value }); token = r.token; localStorage.setItem('tok', token); showRecovery(r.recovery_code, false); }
+    catch (e) { msg('#m', e.message); }
+  };
+}
+function staffForm() {
+  return `<label>كود النشاط (الرابط بالإنجليزي، اسأل المالك)</label><input id="slug" dir="ltr" autocapitalize="none">
+  <label>رقم جوالك</label><input id="phone" type="tel" inputmode="numeric">
+  <label>الرقم السري</label><input id="pin" type="password" inputmode="numeric">
+  <button class="btn" id="go">دخول</button><div id="m"></div>`;
+}
+function wireStaff() {
+  $('#go').onclick = async () => {
+    try { const r = await api('POST', '/api/staff-login', { slug: $('#slug').value, phone: $('#phone').value, pin: $('#pin').value }); token = r.token; localStorage.setItem('tok', token); route(); }
+    catch (e) { msg('#m', e.message); }
+  };
 }
 
 // ---------- dashboard ----------
 function dash() {
-  app.innerHTML = `<div class="center"><h1>${esc(me.name)}</h1></div><div id="view"></div>
-  <nav class="tabs"><button data-t="staff">تسجيل</button><button data-t="cust">العملاء</button><button data-t="set">الإعدادات</button></nav>`;
-  document.querySelectorAll('nav.tabs button').forEach(b => { b.classList.toggle('on', b.dataset.t === tab); b.onclick = () => { tab = b.dataset.t; dash(); }; });
-  ({ staff: staffView, cust: custView, set: setView })[tab]();
+  const tabs = isOwner() ? [['staff', 'تسجيل'], ['cust', 'العملاء'], ['rep', 'التقارير'], ['wa', 'واتساب'], ['set', 'الإعدادات']] : [['staff', 'تسجيل'], ['cust', 'العملاء'], ['out', 'خروج']];
+  if (!tabs.find(t => t[0] === tab)) tab = 'staff';
+  app.innerHTML = `<div class="center"><h1>${esc(me.name)}</h1>${me.staff_name ? `<div class="mut">الموظف: ${esc(me.staff_name)}</div>` : ''}</div><div id="view"></div>
+  <nav class="tabs">${tabs.map(t => `<button data-t="${t[0]}">${t[1]}</button>`).join('')}</nav>`;
+  document.querySelectorAll('nav.tabs button').forEach(b => { b.classList.toggle('on', b.dataset.t === tab); b.onclick = () => { if (b.dataset.t === 'out') return logout(); tab = b.dataset.t; dash(); }; });
+  ({ staff: staffView, cust: custView, rep: repView, wa: waView, set: setView })[tab]();
 }
+function logout() { token = ''; localStorage.removeItem('tok'); me = null; route(); }
 function staffView() {
   const pts = me.mode === 'points';
+  const br = isOwner() && me.branches.length > 1 ? `<label>الفرع</label><select id="br">${me.branches.map(b => `<option value="${b.id}">${esc(b.name)}</option>`).join('')}</select>` : '';
   $('#view').innerHTML = `
-  <div class="stats"><div class="stat"><b>${me.stats.customers}</b><span>عميل</span></div><div class="stat"><b>${me.stats.week}</b><span>عملية آخر 7 أيام</span></div></div>
+  <div class="stats"><div class="stat"><b>${me.stats.customers}</b><span>عميل</span></div><div class="stat"><b>${me.role === 'staff' ? me.stats.mine_today : me.stats.week}</b><span>${me.role === 'staff' ? 'عملياتك النهاردة' : 'عملية آخر 7 أيام'}</span></div></div>
   <div class="card"><h2>تسجيل ${pts ? 'فاتورة' : 'زيارة'}</h2>
   <label>رقم جوال العميل</label><input id="ph" type="tel" inputmode="numeric" placeholder="05xxxxxxxx">
   <label>اسم العميل (اختياري)</label><input id="cn">
-  ${pts ? '<label>مبلغ الفاتورة</label><input id="sp" type="number" inputmode="decimal">' : ''}
+  ${pts ? '<label>مبلغ الفاتورة</label><input id="sp" type="number" inputmode="decimal">' : ''}${br}
   <button class="btn" id="add">${pts ? 'سجل النقاط' : 'سجل ختم'}</button><div id="m"></div><div id="res"></div></div>`;
   $('#add').onclick = async () => {
     msg('#m', ''); $('#res').innerHTML = '';
     try {
-      const r = await api('POST', '/api/add', { phone: $('#ph').value, name: $('#cn').value, spend: pts ? $('#sp').value : undefined });
-      showResult(r.customer, r.added, r.unlocked);
+      const r = await api('POST', '/api/add', { phone: $('#ph').value, name: $('#cn').value, spend: pts ? $('#sp').value : undefined, branch: $('#br') && $('#br').value });
+      showResult(r.customer, r.added);
       me = await api('GET', '/api/me');
     } catch (e) { msg('#m', e.message); }
   };
 }
-function showResult(c, added, unlocked) {
+function showResult(c, added) {
   const goal = c.goal, filled = c.progress;
-  const stamps = me.mode === 'stamps' && goal <= 20 ? `<div class="dots">${Array.from({ length: goal }, (_, i) => `<div class="dot ${i < filled ? 'f' : ''}">${i < filled ? '✓' : ''}</div>`).join('')}</div>` : `<div class="bar"><i style="width:${Math.min(100, filled / goal * 100)}%"></i></div>`;
-  $('#res').innerHTML = `<div class="ok">تم تسجيل +${added} ${unit(me)} لـ ${esc(c.name || c.phone)}</div>${stamps}
+  const vis = me.mode === 'stamps' && goal <= 20 ? `<div class="dots">${Array.from({ length: goal }, (_, i) => `<div class="dot ${i < filled ? 'f' : ''}">${i < filled ? '✓' : ''}</div>`).join('')}</div>` : `<div class="bar"><i style="width:${Math.min(100, filled / goal * 100)}%"></i></div>`;
+  $('#res').innerHTML = `<div class="ok">تم تسجيل +${added} ${unit(me)} لـ ${esc(c.name || c.phone)}</div>${vis}
   <div class="center mut">الرصيد ${c.balance} من ${goal}</div>
   ${c.ready > 0 ? `<div class="celebrate">العميل استحق: ${esc(me.reward)}</div><button class="btn" id="red">سلّم المكافأة</button>` : ''}`;
   const rb = $('#red');
@@ -168,12 +217,62 @@ async function custView() {
   };
   $('#q').oninput = load; load();
 }
-function setView() {
-  const link = location.origin + '/b/' + me.slug;
+
+// ---------- reports (owner) ----------
+async function repView() {
+  $('#view').innerHTML = '<p class="center mut">جاري التحميل...</p>';
+  const [r, l] = await Promise.all([api('GET', '/api/reports'), api('GET', '/api/log')]);
+  const t = r.totals, max = Math.max(1, ...r.days.map(d => d.n));
+  const list = (a, empty) => a.length ? a.map(x => `<div class="row"><span>${esc(x.name)}</span><b>${x.n}</b></div>`).join('') : `<p class="mut">${empty}</p>`;
   $('#view').innerHTML = `
-  <div class="card"><h2>رابط عملائك</h2><p class="mut">العميل يفتح الرابط ويكتب رقمه يشوف رصيده. اطبع الـ QR وحطه عند الكاشير.</p>
-  <div class="link" id="lk">${esc(link)}</div>
-  <div class="center" style="margin-top:12px"><img alt="QR" width="180" height="180" src="https://api.qrserver.com/v1/create-qr-code/?size=360x360&margin=8&data=${encodeURIComponent(link)}"></div>
+  <div class="stats">
+   <div class="stat"><b>${t.customers}</b><span>إجمالي العملاء</span></div><div class="stat"><b>${t.newWeek}</b><span>عملاء جدد آخر 7 أيام</span></div>
+   <div class="stat"><b>${t.returning}</b><span>عملاء رجعوا أكتر من مرة</span></div><div class="stat"><b>${t.rewards}</b><span>مكافآت اتسلمت</span></div>
+   <div class="stat"><b>${t.inactive}</b><span>عملاء غايبين +30 يوم</span></div><div class="stat"><b>${t.blocked}</b><span>محاولات اتمنعت</span></div>
+   ${me.mode === 'points' ? `<div class="stat" style="grid-column:span 2"><b>${Math.round(t.revenue)}</b><span>مبيعات مسجلة آخر 30 يوم</span></div>` : ''}</div>
+  <div class="card"><h2>العمليات آخر 14 يوم</h2><div class="chart">${r.days.map(d => `<div style="height:${Math.max(3, d.n / max * 100)}%"><span>${d.n || ''}</span></div>`).join('')}</div></div>
+  <div class="card"><h2>أكتر العملاء زيارة</h2>${r.top.length ? r.top.map(c => `<div class="row"><span dir="ltr">${esc(c.phone)} ${esc(c.name)}</span><b>${c.visits}</b></div>`).join('') : '<p class="mut">لسه مفيش</p>'}</div>
+  <div class="card"><h2>حسب الموظف (30 يوم)</h2>${list(r.byStaff, 'لسه مفيش')}<h3>حسب الفرع</h3>${list(r.byBranch, 'لسه مفيش')}</div>
+  <button class="btn alt" id="csv">تحميل قائمة العملاء (Excel)</button>
+  <div class="card"><h2>سجل العمليات والمراجعة</h2><p class="mut">آخر 100 عملية. لو في عملية غلط تقدر تلغيها والرصيد بيرجع.</p>
+  ${l.log.map(x => `<div class="row"><div>${x.kind === 'blocked' ? '<span class="tag bad">اتمنعت</span>' : x.kind === 'redeem' ? '<span class="tag good">مكافأة</span>' : '<span class="tag">إضافة +' + x.amount + '</span>'}${x.voided ? ' <span class="tag wait">ملغية</span>' : ''}
+   <b dir="ltr"> ${esc(x.phone)}</b><small>${fmtTime(x.created)} · ${esc(x.sname || 'المالك')}${x.bname ? ' · ' + esc(x.bname) : ''}${x.note ? ' · ' + esc(x.note) : ''}</small></div>
+   ${!x.voided && (x.kind === 'add' || x.kind === 'redeem') ? `<button class="btn sm red" data-v="${x.id}">إلغاء</button>` : ''}</div>`).join('') || '<p class="mut">لسه مفيش</p>'}</div>`;
+  $('#csv').onclick = async () => { const b = await (await api('GET', '/api/export', null, true)).blob(); const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = 'customers.csv'; a.click(); };
+  document.querySelectorAll('[data-v]').forEach(b => b.onclick = async () => { if (!confirm('تلغي العملية دي؟')) return; try { await api('POST', '/api/void', { id: b.dataset.v }); repView(); } catch (e) { alert(e.message); } });
+}
+
+// ---------- WhatsApp (owner) ----------
+const EVENTS = { welcome: 'ترحيب بأول زيارة', earn: 'بعد كل زيارة', reward: 'لما يستحق المكافأة', inactive: 'تذكير للعميل الغايب' };
+const STATUS = { queued: ['wait', 'في الانتظار'], sent: ['good', 'اتبعتت'], failed: ['bad', 'فشلت'] };
+async function waView() {
+  const w = await api('GET', '/api/whatsapp');
+  $('#view').innerHTML = `
+  <div class="card"><h2>رسائل واتساب للعملاء</h2>
+  ${w.connected ? '<div class="ok">واتساب متوصل، الرسائل بتتبعت تلقائي.</div>' : '<div class="warn">واتساب لسه مش متوصل برقم. الرسائل بتتجهز وتستنى في الطابور، وأول ما نوصل الرقم بتتبعت لوحدها.</div>'}
+  <div class="sw"><input type="checkbox" id="en" ${w.enabled ? 'checked' : ''}><label style="margin:0;color:var(--ink)">فعّل الرسائل التلقائية</label></div>
+  ${Object.keys(EVENTS).map(k => `<h3>${EVENTS[k]}</h3><div class="sw"><input type="checkbox" id="on_${k}" ${w.templates[k].on ? 'checked' : ''}><span class="mut">شغّال</span></div><textarea id="tx_${k}">${esc(w.templates[k].text)}</textarea><label>اسم قالب واتساب المعتمد (اختياري)</label><input id="tp_${k}" dir="ltr" value="${esc(w.templates[k].template)}">`).join('')}
+  <p class="mut">المتغيرات: {name} {business} {balance} {goal} {left} {reward}</p>
+  <button class="btn" id="sv">حفظ</button><div id="m"></div></div>
+  <div class="card"><button class="btn alt" id="rm">جهّز رسايل للعملاء الغايبين (+30 يوم)</button><div id="m2"></div></div>
+  <div class="card"><h2>طابور الرسائل</h2><div class="mut">${Object.entries(w.counts).map(([k, v]) => `${STATUS[k] ? STATUS[k][1] : k}: ${v}`).join(' · ') || 'فاضي'}</div>
+  ${w.outbox.map(o => `<div class="row"><div><span class="tag ${STATUS[o.status] ? STATUS[o.status][0] : ''}">${STATUS[o.status] ? STATUS[o.status][1] : o.status}</span> <b dir="ltr">${esc(o.phone)}</b><small>${esc(o.text)}${o.error ? ' · ' + esc(o.error) : ''}</small></div></div>`).join('')}</div>`;
+  $('#sv').onclick = async () => {
+    const templates = {}; Object.keys(EVENTS).forEach(k => templates[k] = { on: $('#on_' + k).checked, text: $('#tx_' + k).value, template: $('#tp_' + k).value });
+    try { await api('PUT', '/api/whatsapp', { enabled: $('#en').checked, templates }); msg('#m', 'تم الحفظ', true); } catch (e) { msg('#m', e.message); }
+  };
+  $('#rm').onclick = async () => { try { const r = await api('POST', '/api/whatsapp/remind'); msg('#m2', `تم تجهيز ${r.queued} رسالة`, true); setTimeout(waView, 900); } catch (e) { msg('#m2', e.message); } };
+}
+
+// ---------- settings (owner) ----------
+async function setView() {
+  const link = location.origin + '/b/' + me.slug;
+  const [st, sys] = await Promise.all([api('GET', '/api/staff'), api('GET', '/api/system')]);
+  const bn = id => (me.branches.find(b => b.id === id) || {}).name || 'كل الفروع';
+  $('#view').innerHTML = `
+  <div class="card"><h2>رابط عملائك</h2><p class="mut">العميل يفتح الرابط ويكتب رقمه يشوف رصيده. اطبع الـ QR وحطه عند الكاشير. كود الموظفين: <b dir="ltr">${esc(me.slug)}</b></p>
+  <div class="link">${esc(link)}</div>
+  <div class="center" style="margin-top:12px"><img alt="QR" width="170" height="170" src="https://api.qrserver.com/v1/create-qr-code/?size=340x340&margin=8&data=${encodeURIComponent(link)}"></div>
   <button class="btn alt" id="cp">انسخ الرابط</button></div>
   <div class="card"><h2>إعدادات الولاء</h2>
   <label>اسم النشاط</label><input id="n" value="${esc(me.name)}">
@@ -182,22 +281,40 @@ function setView() {
   <label>نقاط عن كل 1 وحدة عملة (للنقاط فقط)</label><input id="r" type="number" step="0.1" value="${me.rate}">
   <label>المكافأة</label><input id="rw" value="${esc(me.reward)}">
   <label>لون النشاط</label><input id="cl" type="color" value="${me.color}">
-  <button class="btn" id="sv">حفظ</button><div id="m"></div>
+  <h3>الحماية من التلاعب</h3>
+  <label>أقل وقت بين زيارتين لنفس العميل (دقيقة)</label><input id="cd" type="number" value="${me.cooldown_min}">
+  <label>أقصى عدد عمليات للعميل في اليوم</label><input id="dc" type="number" value="${me.daily_cap}">
+  <button class="btn" id="sv">حفظ</button><div id="m"></div></div>
+  <div class="card"><h2>الفروع</h2>${me.branches.map(b => `<div class="row"><span>${esc(b.name)}</span><button class="btn sm alt" data-bd="${b.id}">حذف</button></div>`).join('')}
+  <label>فرع جديد</label><input id="bn" placeholder="اسم الفرع"><button class="btn alt" id="ba">إضافة فرع</button><div id="mb"></div></div>
+  <div class="card"><h2>الموظفين</h2><p class="mut">كل موظف يدخل برقم جواله وسري ورابط النشاط (${esc(me.slug)}) ويسجل بس، ومايشوفش التقارير.</p>
+  ${st.staff.filter(s => s.active).map(s => `<div class="row"><div>${esc(s.name)}<small dir="ltr">${esc(s.phone)} · ${esc(bn(s.branch))}</small></div><button class="btn sm alt" data-sd="${s.id}">إيقاف</button></div>`).join('') || '<p class="mut">لسه مفيش موظفين</p>'}
+  <label>اسم الموظف</label><input id="sn"><label>رقم جواله</label><input id="sp" type="tel" inputmode="numeric">
+  <label>رقم سري (4 أرقام على الأقل)</label><input id="sk" type="password" inputmode="numeric">
+  <label>الفرع</label><select id="sb"><option value="">بدون</option>${me.branches.map(b => `<option value="${b.id}">${esc(b.name)}</option>`).join('')}</select>
+  <button class="btn" id="sa">إضافة موظف</button><div id="ms"></div></div>
+  <div class="card"><h2>حالة النظام</h2>
+  <p>حفظ البيانات: ${sys.backup ? '<span class="tag good">نسخ احتياطي تلقائي شغال</span>' : '<span class="tag bad">غير مفعّل</span>'}</p>
+  ${sys.last_backup ? `<p class="mut">آخر نسخة: ${fmtTime(sys.last_backup)}</p>` : ''}${sys.backup_error ? `<p class="mut">${esc(sys.backup_error)}</p>` : ''}
+  <p>واتساب: ${sys.whatsapp_connected ? '<span class="tag good">متوصل</span>' : '<span class="tag wait">جاهز للتوصيل</span>'}</p>
   <button class="btn alt" id="lo">تسجيل خروج</button></div>`;
   $('#cp').onclick = () => { navigator.clipboard && navigator.clipboard.writeText(link); $('#cp').textContent = 'تم النسخ'; };
   $('#sv').onclick = async () => {
-    try { await api('PUT', '/api/settings', { name: $('#n').value, mode: $('#md').value, goal: $('#g').value, rate: $('#r').value, reward: $('#rw').value, color: $('#cl').value }); me = await api('GET', '/api/me'); document.documentElement.style.setProperty('--c', me.color); msg('#m', 'تم الحفظ', true); }
+    try { await api('PUT', '/api/settings', { name: $('#n').value, mode: $('#md').value, goal: $('#g').value, rate: $('#r').value, reward: $('#rw').value, color: $('#cl').value, cooldown_min: $('#cd').value, daily_cap: $('#dc').value }); me = await api('GET', '/api/me'); setColor(me.color); msg('#m', 'تم الحفظ', true); }
     catch (e) { msg('#m', e.message); }
   };
-  $('#lo').onclick = () => { token = ''; localStorage.removeItem('tok'); route(); };
+  $('#ba').onclick = async () => { try { await api('POST', '/api/branches', { name: $('#bn').value }); me = await api('GET', '/api/me'); setView(); } catch (e) { msg('#mb', e.message); } };
+  document.querySelectorAll('[data-bd]').forEach(b => b.onclick = async () => { try { await api('DELETE', '/api/branches?id=' + b.dataset.bd); me = await api('GET', '/api/me'); setView(); } catch (e) { msg('#mb', e.message); } });
+  $('#sa').onclick = async () => { try { await api('POST', '/api/staff', { name: $('#sn').value, phone: $('#sp').value, pin: $('#sk').value, branch: $('#sb').value }); setView(); } catch (e) { msg('#ms', e.message); } };
+  document.querySelectorAll('[data-sd]').forEach(b => b.onclick = async () => { await api('DELETE', '/api/staff?id=' + b.dataset.sd); setView(); });
+  $('#lo').onclick = logout;
 }
 
 // ---------- customer card ----------
 async function customerView(slug) {
   let biz;
   try { biz = await api('GET', '/api/public/' + slug); } catch (e) { app.innerHTML = '<div class="card center">النشاط مش موجود</div>'; return; }
-  document.documentElement.style.setProperty('--c', biz.color);
-  document.title = biz.name;
+  setColor(biz.color); document.title = biz.name;
   app.innerHTML = `<div class="hero"><h1>${esc(biz.name)}</h1><p>كارت الولاء الخاص بيك. المكافأة: <b>${esc(biz.reward)}</b> بعد ${biz.goal} ${unit(biz)}.</p></div>
   <div class="card"><label>اكتب رقم جوالك</label><input id="ph" type="tel" inputmode="numeric" placeholder="05xxxxxxxx" value="${esc(localStorage.getItem('ph_' + slug) || '')}"><button class="btn" id="sh">اعرض كارتي</button><div id="m"></div><div id="res"></div></div>`;
   const go = async () => {
