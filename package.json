@@ -1,0 +1,9 @@
+{
+  "name": "wala2-loyalty",
+  "version": "0.1.0",
+  "description": "برنامج ولاء مفتوح لأي نشاط تجاري: أختام أو نقاط ومكافآت",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=22.5" },
+  "license": "MIT"
+}
